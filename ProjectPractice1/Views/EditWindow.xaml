@@ -1,0 +1,74 @@
+﻿<Window x:Class="ProjectPractice1.Views.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectPractice1.Views"
+        mc:Ignorable="d"
+        Title="Окно редактирования" 
+        Height="430" 
+        Width="500"
+        FontSize="15"
+        ResizeMode="NoResize">
+    <Grid>
+        <TabControl x:Name="TabControl1">
+            <TabItem Header="Сотрудники" Width="120">
+                <StackPanel
+                    Orientation="Vertical"
+                    Margin="10"
+                    VerticalAlignment="Center">
+                    <TextBlock
+                        Text="Имя"/>
+                    <TextBox x:Name="TB_FirstName"/>
+                    <TextBlock
+                        Text="Фамилия"/>
+                    <TextBox x:Name="TB_LastName"/>
+                    <TextBlock
+                        Text="Отчество"/>
+                    <TextBox x:Name="TB_MiddleName"/>
+                    <TextBlock
+                        Text="Возраст"/>
+                    <TextBox x:Name="TB_Age"/>
+                    <TextBlock
+                        Text="Опыт работы"/>
+                    <TextBox x:Name="TB_Expirience"/>
+                    <TextBlock
+                        Text="Должность"/>
+                    <TextBox x:Name="TB_PostId"/>
+                    <TextBlock
+                        Text="Отдел"/>
+                    <TextBox x:Name="TB_DepartmentId"/>
+                    <Grid Margin="0, 10, 0, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.5*"/>
+                            <ColumnDefinition Width="0.5*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button 
+                            Grid.Column="0"
+                            Margin="0, 0, 5, 0"
+                            Content="Добавить"
+                            Click="ButtonAddEmployee_Click"/>
+                        <Button 
+                            Grid.Column="1"
+                            Margin="5, 0, 0, 0"
+                            Content="Сохранить"
+                            Click="ButtonSaveEmployee_Click"/>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Отделы" Width="120">
+                <TextBlock 
+                    Text="Departments"/>
+            </TabItem>
+            <TabItem Header="Инвентарь" Width="120">
+                <TextBlock 
+                    Text="Equipments"/>
+            </TabItem>
+            <TabItem Header="Должности" Width="120">
+                <TextBlock 
+                    Text="Posts"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
